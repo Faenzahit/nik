@@ -1,0 +1,14 @@
+ErrorDocument 404 /404.html
+DirectoryIndex index.php index.html
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteEngine On
+RewriteRule ^index\.html$ / [L,R=301]
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www.nikanna.in$ [NC]
+RewriteRule ^(.*)$ http://nikanna.in/$1 [R=301,L]
+RewriteEngine On
+# Редирект с index.html на /
+RewriteCond %{THE_REQUEST} \s/index\.html[\s?] [NC]
+RewriteRule ^index\.html$ / [R=301,L]
