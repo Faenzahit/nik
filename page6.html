@@ -1,68 +1,275 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "https://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Русские в Доминикане</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://nikanna.in/">
 
-<HTML lang=ru xml:lang="ru" xmlns="https://www.w3.org/1999/xhtml"><HEAD><TITLE>ПМЖ</TITLE>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
-<meta name="author" content="nik shnekenberg" >
-<meta name="description" content="Как самостоятельно получить ПМЖ в Доминикане
-" />
-<meta name="keywords" content="ПМЖ в Доминикане, Николай и Анна в Доминикане, русские в Доминикане, гид Николай в Доминикане, Анна в Доминикане" />
-<meta name="google-site-verification" content="rOEwRm1qBwgFL1Ix6H4BIDnj-zgZsgcEKSDW6BnHfvE" />
-<meta name='yandex-verification' content='77cdce4d64f951fd' />
-<META NAME=ROBOTS" CONTENT="INDEX, FOLLOW">
-<link rel="canonical" href="https://nikanna.in/">
-<link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+    <!-- Не смотрите мой код, он очень плохой  -->
+    <link
+      rel="icon"
+      href="https://nikanna.in/favicon.ico"
+      type="image/x-icon"
+    >
 
-<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-<link rel="stylesheet" href="font-awesome/fa-viber.css">
-<link rel="stylesheet" type="text/css" href="andreas.css">
+    <link rel="stylesheet" type="text/css" href="highslide/highslide.css" >
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="font-awesome/fa-viber.css" >
+    <meta name="author" content="nik shnekenberg">
+    <meta
+      name="description"
+      content="русские в Доминикане,  Николай и Анна в Доминикане, работа в Доминикане, правда о жизни в Доминикане, русский гид в Доминикане, жизнь русской семьи в Доминикане,  история любви"
+    >
+    <meta
+      name="keywords"
+      content="русские в Доминикане, Николай и Анна в Доминикане, работа в Доминикане, правда о жизни в Доминикане, жизнь русской семьи в Доминикане, история любви"
+    >
+    <link rel="preconnect" href="https://fonts.gstatic.com" >
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap"
+      rel="stylesheet"
+    >
+    <link
+      href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic"
+      rel="stylesheet"
+      type="text/css"
+    >
+    <meta name="yandex-verification" content="32e1b7bd08a17adf" >
+    <meta name="cypr-verification" content="cf5772e3f88ef62eff85f3cacd11ebd9" >
+    <meta
+      name="google-site-verification"
+      content="9YzBiMby_yY1sbyVKigyW56zpGRNiYgXMUNgnVntG4s"
+    >
+    <meta
+      name="google-site-verification"
+      content="YThvaxxW1kP4_MJlSUkXj-uQNIWAuCnwcQGtjtoopoI"
+    >
+    <meta name="ROBOTS" content="INDEX, FOLLOW" >
+    <link rel="stylesheet" type="text/css" href="andreas.css" >
 
+    <!-- ===================== АДАПТИВНОСТЬ (добавлено) ===================== -->
+    <style>
+      /* Базовые правила, чтобы ничего не "убегало" за пределы экрана */
+      html {
+        box-sizing: border-box;
+      }
+      *, *:before, *:after {
+        box-sizing: inherit;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
 
-</HEAD>
-<BODY>
+      /* Основной layout переводим на flex, но на десктопе это выглядит так же,
+         как и раньше (просто более гибко) */
+   /*   #wrap {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 100%;
+      }*/
+      #leftside {
+        flex: 0 0 auto;
+      }
+      #content {
+        flex: 1 1 auto;
+        min-width: 0; /* чтобы длинный текст/картинки не распирали колонку */
+      }
 
-<DIV id=wrap>
-<DIV id=header>
-<H1>Николай и Анна в Доминикане</H1>
-<!--<P style=" position:  absolute; top:  165px"><font color="#FFFFFF">Санкт-Петербург - Санто-Доминго</font></P>-->
-</DIV>
-<DIV id=leftside >
+      /* Кнопка-гамбургер: скрыта на десктопе */
+      .menu-toggle {
+        display: none;
+        width: 100%;
+        text-align: left;
+        background: #222;
+        color: #fff;
+        border: none;
+        padding: 14px 16px;
+        font-size: 18px;
+        cursor: pointer;
+        align-items: center;
+        gap: 10px;
+      }
+      .menu-toggle .bar,
+      .menu-toggle .bar:before,
+      .menu-toggle .bar:after {
+        content: "";
+        display: block;
+        width: 24px;
+        height: 3px;
+        background: #fff;
+        position: relative;
+      }
+      .menu-toggle .bar:before {
+        position: absolute;
+        top: -8px;
+      }
+      .menu-toggle .bar:after {
+        position: absolute;
+        top: 8px;
+      }
 
-<UL class=avmenu>
-<LI><A  href="./">Главная</A></LI>
-<LI><A href="page2.html">О нас</A></LI>
-<LI><A href="page3.html">Переезд</A></LI>
-<LI><A href="page4.html">Свадьба</A></LI>
-<LI><A href="page5.html">ВНЖ</A></LI>
-<LI><A class=current href="page6.html">ПМЖ</A></LI>
-<LI><A href="page7.html">Работа</A></LI>
-<LI><A href="page8.html">Бюджет</A></LI>
-<LI><A href="page9.html">Мои услуги</A></LI>
-<LI><A href="pro.html">Мои рассказы</A></LI>
-<LI><A href="viktor.html">Памяти отца</A></LI>
-<LI><A href="time.html">Время</A></LI>
-<LI><A href="help.html">Помощь сайту</A></LI>
-<LI><A href="./nik/">Экскурсии</A></LI>
-</UL>
+      /* ===================== МОБИЛЬНАЯ ВЕРСИЯ ===================== */
+      @media (max-width: 900px) {
+        #wrap {
+          display: block;
+        }
 
-</DIV>
-  <!-- Центр1 -->
+        .menu-toggle {
+          display: flex;
+        }
+
+        #leftside {
+          display: none;
+          width: 100%;
+          flex-basis: 100%;
+        }
+
+        #leftside.open {
+          display: block;
+        }
+
+        #leftside ul.avmenu {
+          width: 100%;
+        }
+
+        #leftside ul.avmenu li a {
+          display: block;
+          width: 100%;
+          padding: 10px 14px;
+        }
+
+        #content {
+          width: 100%;
+          flex-basis: 100%;
+          padding-left: 1px;
+          padding-right: 12px;
+        }
+
+        #header h1 {
+          font-size: 22px;
+          text-align: center;
+          padding: 10px;
+        }
+
+        .slideshow img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      @media (max-width: 480px) {
+        #header h1 {
+          font-size: 18px;
+        }
+        .round1 {
+          padding: 10px;
+        }
+      }
+    </style>
+    <!-- =================== КОНЕЦ БЛОКА АДАПТИВНОСТИ =================== -->
+  </head>
+
+  <body>
+    <div id="wrap">
+      <div id="header">
+        <h1>Николай и Анна в Доминикане</h1>
+      </div>
+
+      <!-- Кнопка гамбургер-меню, видна только на мобильных -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню" aria-expanded="false">
+        <span class="bar"></span>
+        <span>Меню</span>
+      </button>
+
+      <div id="leftside">
+        <ul class="avmenu">
+          <li><a  href="./">Главная</a></li>
+          <li><a href="page2.html">О нас</a></li>
+          <li><a href="page3.html">Переезд</a></li>
+          <li><a href="page4.html">Свадьба</a></li>
+          <li><a href="page5.html">ВНЖ</a></li>
+          <li><a class="current" href="page6.html">ПМЖ</a></li>
+          <li><a href="page7.html">Работа</a></li>
+          <li><a href="page8.html">Бюджет</a></li>
+          <li><a href="page9.html">Мои услуги</a></li>
+          <li><a href="pro.html">Мои рассказы</a></li>
+          <li><a href="https://family.nikolai-shnekenberg.workers.dev/" target="_blank">Память</a></li>
+          <li><a href="time.html">Время</a></li>
+          <li><a href="help.html">Помощь сайту</a></li>
+          <li><a href="./nik/">Экскурсии</a></li>
+          <!--<li><a href="web.html">Вебкамера</a></li>
+          <li><a href="wetter.html">Погода</a></li>-->
+          <li><a href="pano.html">Панорама</a></li>
+          <li><a href="video/magia.html">Магия</a></li>
+          <li><a href="pooh/pooh.html">Мультик</a></li>
+          <li><a href="matrix.html">Матрица</a></li>
+        </ul>
+        <div>&nbsp;</div>
+
+        <div class="announce" style="font-size: 14px">
+          <h2 style="font-size: 18px">Контакты</h2>
+          <hr>
+
+            <i class="fa fa-whatsapp fa-2x" style="color: green"></i
+            >&nbsp;&nbsp;
+            <a href="https://wa.me/18098894417" target="_blank" rel="nofollow">WhatsApp</a>
+            <hr >
+            <i class="fa fa-telegram fa-2x" style="color: blue"></i>&nbsp;
+            <a href="https://t.me/Nikanna1" target="_blank" rel="nofollow">Telegram</a>
+            <hr >
+            <i class="fa fa-viber fa-2x"></i>&nbsp;&nbsp;<a
+              href="viber://add?number=18098894417" target="_blank" rel="nofollow"
+              >Viber</a
+            >
+
+            <hr >
+
+            <i class="fa fa-facebook fa-2x" style="color: DarkBlue"></i
+            >&nbsp;&nbsp;<a
+              href="https://www.messenger.com/t/nikolai.shnekenberg" target="_blank" rel="nofollow"
+              >Messenger</a
+            >
+            <hr >
+            <i class="fa fa-instagram fa-2x" style="color: red"></i
+            >&nbsp;&nbsp;<a
+              href="https://www.instagram.com/nikannadominicana"
+              target="_blank"  rel="nofollow"
+              >Instagram</a
+            >
+            <hr >
+            <i class="fa fa-phone fa-2x"></i>&nbsp;&nbsp;<a
+              href="tel:+18098894417" target="_blank" rel="nofollow"
+              >Mobil</a
+            >
+            <hr >
+            <i class="fa fa-envelope-open-o fa-2x" style="color: green"></i>
+            &nbsp;&nbsp;
+            <a
+              href="/cdn-cgi/l/email-protection#790916161114161617390018570b0c"
+              title="ПОЧТА" target="_blank" rel="nofollow"
+              >ПОЧТА</a
+            >
+
+        </div>
+      </div>
+      <!-- Центр1 -->
 <DIV id=content>
 <div id=fona>
 	<h2>ПМЖ</h2><hr width="200" color="#E4E4E4" size="1" align="left">
 		<p align="justify">
 Вот и подошла к своему завершению наша эпопея с получением ПМЖ в Доминикане. Уже тысячи наших соотечественников прошли эту непростую процедуру, ещё многим тысячам предстоит её пройти. У каждого это происходило по-разному, и моя заметка - вовсе не пример того, как это происходит здесь, а только описание нашего случая. В январе 2008 года мы получили ВНЖ. И вот наступает март - можно подавать документы на постоянную резиденцию. Весь процесс - полностью идентичный первому. Не мудрствуя лукаво, снова обращаемся к своему адвокату, считая её надёжным и порядочным человеком. Она нам называет цену в 45.000 песо (около 1400$) на двоих, плюс мы оплачиваем медкомиссию (около 200$). Итого: 1600$ на меня и жену. При средней стоимости у других адвокатов в 1200$ на одного - то, согласитесь, экономия существенная. ( И дело не в нашей скупости, а в том, что мы совсем не богатые люди...)
-<IMG  style="MARGIN: 0px 0px 0px 10px; padding: 8px; background: #fff; box-shadow: 1px 1px 5px rgba(0, 0, 0, .8);" alt="" hspace=6 src="pics/page6000001.jpg" align=right  vspace=2 border=0><BR>И вот пройдена медкомиссия, по просьбе адвоката мы вручаем ей сразу всю сумму, (она предупредила, что на этот раз оформление может затянуться до 6-ти месяцев); но нам торопиться некуда и мы спокойно настраиваемся на полгода ожидания... <br>
+<IMG  style="MARGIN: 0px 0px 0px 10px; padding: 3px; background: #fff; box-shadow: 1px 1px 5px rgba(0, 0, 0, .8);" alt="" hspace=6 src="pics/page6000001.jpg" align=right  vspace=2 border=0><BR>И вот пройдена медкомиссия, по просьбе адвоката мы вручаем ей сразу всю сумму, (она предупредила, что на этот раз оформление может затянуться до 6-ти месяцев); но нам торопиться некуда и мы спокойно настраиваемся на полгода ожидания... <br>
 Полгода пролетели незаметно. Решаем позвонить ей, поинтересоваться, как идут дела. В ответ слышим: неожиданно подвернулась оказия поработать в Штатах, поэтому я сейчас там, но вы не волнуйтесь, всё под контролем, я скоро вернусь и всё будет в порядке! Особой тревоги это сообщение у нас не вызвало, в конце концов плюс минус пару месяцев погоды не сделают.
 <br>Прошло ещё четыре месяца... <br>И тут начались странности - при каждом звонке ей, мы слышали в трубку:"...ой, я сейчас за рулём, (на совещании, на деловой встрече, в туалете) - я перезвоню!" Но звонка не было. Выждав недельку, мы звонили снова сами - и слышали то же самое! Я тупо начал названивать ей каждый день, но она стала просто нажимать кнопку "Отбой" на своём телефоне... Мы оказались в западне - отданы деньги, документы - и мы ничего не можем изменить. Ради сохранения рассудка надо было просто не думать об этом. <br>Наступил март 2009 года, то есть прошёл год с момента подачи документов. И вот, (о Чудо!), при очередной попытке дозвониться до неё - она снимает трубку и после обязательных в Доминикане "Mi Amor como tu estas?" заявляет: а почему вы до сих пор не сдали резиденции в Миграсьон? От такой дерзости у меня пропадает дар речи - так кто из нас адвокат, кто получает деньги, и кто это должен делать и почему она несколько месяцев бросает трубку?!!
 <br>-Ладно, говорит она невозмутимым голосом, везите резиденции моей дочке, она передаст их другому адвокату, и тот попробует (?!!) сдать их сам. Жена горит желанием крикнуть ей в трубку нехорошее слово, я пытаюсь её успокоить, говорю, что у нас просто нет иного выхода, так как документы у неё и надо только ждать, когда это всё закончится... <br>Проходит ещё месяц. Снова звоним ей - и очередная новость: ребята, вы так долго возились с документами (?!!), что истёк срок годности вашей медкомиссии, и вам надо пройти её повторно! Деваться некуда, платим 200$, проходим мед.экзамен, отвозим справки дочке... <br>И вот наступает сентябрь. Звонит дочка адвоката и говорит: можете забрать свои документы. Неужели? Приезжаем, и она отдаёт нам наши свидетельства о рождении, о браке, паспорта. Слава Богу, хоть это вернулось нам! Но как же ПМЖ? Подождите, я вам позвоню...<BR>
-<IMG style="MARGIN: 3px 12px 0px 0px; padding: 8px; background: #fff; box-shadow: 1px 1px 5px rgba(0, 0, 0, .8);" alt="" hspace=5 src="pics/page6000002.jpg" align=left  vspace=2 border=0>Говорю жене: давай радоваться хотя бы тому, что наши документы целы и у нас на руках. А уж всё остальное - не так уж и важно... Если и решила адвокат обмануть нас таким способом - то пусть это будет на её совести... <br>Но вчера прозвенел телефон и дочка сказала, что можно получать ПМЖ.<br> Мы поехали в Миграсьон, там узнали, что карточка резиденции стоит 3.500 песо, плюс 500 песо пеня за каждый месяц со дня депозита резиденции. Итого на двоих надо заплатить ещё 13.000 песо и нам назначат дату получения - 6 октября. (Но, если мы хотим получить резиденцию прямо сегодня, то заплатить надо 17.000 песо).<br> Мы не захотели сегодня... <br>Заплатили деньги и уехали домой. Приедем в октябре. Теперь уже спешить некуда... <br>Вот такая обыкновенная история. Я даже не обвиняю нашего адвоката - она обычная доминиканка и поспешность не в их крови. Да и конечный результат-то положительный! А то, что это стоило нам всё-равно тех же двух с лишним тысяч долларов и 18-ти месяцев ожидания в нервотрёпке и стрессах - так это уже мелочи... <br>Так что если у вас есть деньги, ( а кто, кроме нас, безумцев, приехал сюда без денег?) - то не пытайтесь сэкономить пару сотен! Лучше воспользуйтесь услугами тех, кто на самом деле делает документы без лишней головной боли, кто имеет хорошую репутацию и большой опыт в таких делах. Поверьте, психическое здоровье стоит дороже денег! Да и экономия, как в нашем случае, может оказаться совсем не экономной...<BR>Всем успешного получения вида на жительство!</P>
+<IMG style="MARGIN: 3px 12px 0px 0px; padding: 3px; background: #fff; box-shadow: 1px 1px 5px rgba(0, 0, 0, .8);" alt="" hspace=5 src="pics/page6000002.jpg" align=left  vspace=2 border=0>Говорю жене: давай радоваться хотя бы тому, что наши документы целы и у нас на руках. А уж всё остальное - не так уж и важно... Если и решила адвокат обмануть нас таким способом - то пусть это будет на её совести... <br>Но вчера прозвенел телефон и дочка сказала, что можно получать ПМЖ.<br> Мы поехали в Миграсьон, там узнали, что карточка резиденции стоит 3.500 песо, плюс 500 песо пеня за каждый месяц со дня депозита резиденции. Итого на двоих надо заплатить ещё 13.000 песо и нам назначат дату получения - 6 октября. (Но, если мы хотим получить резиденцию прямо сегодня, то заплатить надо 17.000 песо).<br> Мы не захотели сегодня... <br>Заплатили деньги и уехали домой. Приедем в октябре. Теперь уже спешить некуда... <br>Вот такая обыкновенная история. Я даже не обвиняю нашего адвоката - она обычная доминиканка и поспешность не в их крови. Да и конечный результат-то положительный! А то, что это стоило нам всё-равно тех же двух с лишним тысяч долларов и 18-ти месяцев ожидания в нервотрёпке и стрессах - так это уже мелочи... <br>Так что если у вас есть деньги, ( а кто, кроме нас, безумцев, приехал сюда без денег?) - то не пытайтесь сэкономить пару сотен! Лучше воспользуйтесь услугами тех, кто на самом деле делает документы без лишней головной боли, кто имеет хорошую репутацию и большой опыт в таких делах. Поверьте, психическое здоровье стоит дороже денег! Да и экономия, как в нашем случае, может оказаться совсем не экономной...<BR>Всем успешного получения вида на жительство!</P>
 <hr size="1"; color="#DADADA" />
 <p align="justify"><strong>UPD от 10.11.2011</strong><br>
 <font color="#FF0000"><strong>Вот теперь с полной уверенностью могу рекомендовать надёжного и порядочного русскоязычного адвоката, который сделает вам ВНЖ, ПМЖ, гражданство, доминиканские права - без проблем и нервотрёпок!<br><strong><s>РАСЦЕНКИ РУССКОЯЗЫЧНОГО АДВОКАТА.</s></strong> </strong></font></p><hr size="1"; color="#DADADA" />
-<P align="justify"><STRONG>UPD от 09.10.09</STRONG><BR><img src="pics/gun.jpg" style="MARGIN: 0px 0px 0px 10px; padding: 8px; background: #fff; box-shadow: 1px 1px 5px rgba(0, 0, 0, .8);"  width="176" height="200" align="right" hspace="6" vspace="2" alt=""  />6 октября съездили в Миграсьон, через час ожидания были приглашены для фотографирования на резиденцию, и ещё через час всё было готово. Поехали в Хунту, ( кстати, сейчас отдел для иностранцев размещается в новом здании, метров 300 ниже по Луперону, и нет никакой вывески!). Народу почти не было, присутствовала лишь пара китайцев и один гаитянец. Уплатили в кассу по 1200 песо на каждого, сфотографировались, сдали отпечатки пальцев - и получили новые седулы.<br> Уф! <br>Можно перевести дух. История с документами позади... <br>Теперь можно <a href="https://nik-anna.blogspot.com/2010/07/blog-post_31.html" target="_blank" title="Получение доминиканских прав">обменять российские права на доминиканские</a>, можно, наконец, легально приобрести пистолет, можно въезжать и выезжать из страны, не платя никаких туристических сборов, пользоваться всеми правами местного населения, за исключением права голосовать на выборах.<BR>( А может замахнуться ещё и на гражданство?!!)</P><hr size="1"; color="#DADADA" />
+<P align="justify"><STRONG>UPD от 09.10.09</STRONG><BR><img src="pics/gun.jpg" style="MARGIN: 0px 0px 0px 10px; padding: 3px; background: #fff; box-shadow: 1px 1px 5px rgba(0, 0, 0, .8);"  width="176" height="200" align="right" hspace="6" vspace="2" alt=""  />6 октября съездили в Миграсьон, через час ожидания были приглашены для фотографирования на резиденцию, и ещё через час всё было готово. Поехали в Хунту, ( кстати, сейчас отдел для иностранцев размещается в новом здании, метров 300 ниже по Луперону, и нет никакой вывески!). Народу почти не было, присутствовала лишь пара китайцев и один гаитянец. Уплатили в кассу по 1200 песо на каждого, сфотографировались, сдали отпечатки пальцев - и получили новые седулы.<br> Уф! <br>Можно перевести дух. История с документами позади... <br>Теперь можно <a href="https://nik-anna.blogspot.com/2010/07/blog-post_31.html" target="_blank" title="Получение доминиканских прав">обменять российские права на доминиканские</a>, можно, наконец, легально приобрести пистолет, можно въезжать и выезжать из страны, не платя никаких туристических сборов, пользоваться всеми правами местного населения, за исключением права голосовать на выборах.<BR>( А может замахнуться ещё и на гражданство?!!)</P><hr size="1"; color="#DADADA" />
 <P><STRONG>UPD от 10.12.10<BR></STRONG>А вот и началось <A href="https://nik-anna.blogspot.com/2010/12/2.html" target=_blank>повышение цен на иммиграцию в Доминикану.<BR></A></P><hr size="1"; color="#DADADA" />
 <P><STRONG>UPD от 10.10.11<BR></STRONG>Быстро пролетело два года и вот мы уже и резиденцию (ПМЖ) <A href="https://nik-anna.blogspot.com/2011/09/blog-post.html" target=_blank>продлеваем.<BR></A></P><hr size="1"; color="#DADADA" />
 <P><STRONG>UPD от 17.09.11<BR></STRONG></p>
@@ -137,38 +344,162 @@
 
 <!-- Центр2 -->
 </DIV> </div> </div>
-<DIV id=footer><br>
-<small>Сайт был основан в 2005 году и</small>
-<SCRIPT language=JavaScript>
-<!--
+    <div id="footer">
+      <br>
+      <small>Сайт был основан в 2005 году и</small>
 
-d0 = new Date('january 28, 2005');
+      <script
+        data-cfasync="false"
+        src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+      ></script>
+      <script >
+        <!--
 
-d1 = new Date();
+        d0 = new Date("january 28, 2005")
 
-dt = (d1.getTime() - d0.getTime()) / (1000*60*60*24);
+        d1 = new Date()
 
-document.write('<SMALL>');
+        dt = (d1.getTime() - d0.getTime()) / (1000 * 60 * 60 * 24)
 
-document.write('существует <B>' + Math.round(dt) + '</B>-й день!');
+        document.write("<SMALL>")
 
-document.write('</SMALL>');
+        document.write("существует <B>" + Math.round(dt) + "</B>-й день!")
 
---> </SCRIPT>
+        document.write("</SMALL>")
 
-<P>© 2005 - 2027 <A href="https://nikanna.in">Николай и Анна в Доминикане</A> </P>
-</DIV>
-<!--  -->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        -->
+      </script>
+      <br >
 
-  ga('create', 'UA-64999055-1', 'auto');
-  ga('send', 'pageview');
+      <p>
+        © 2005 - 2027
+        <a href="./">Николай и Анна в Доминикане</a>
 
-</script>
-<!--  -->
+        <br >
+      </p>
+    </div>
 
-</BODY></HTML>
+    <script>
+      const slides = document.querySelectorAll('.slideshow img');
+      let current = 0;
+
+      setInterval(() => {
+          slides[current].classList.remove('active');
+          current = (current + 1) % slides.length;
+          slides[current].classList.add('active');
+      }, 5000); // каждые 5 секунд
+    </script>
+
+    <!-- ===================== JS для гамбургер-меню (добавлено) ===================== -->
+    <script>
+      (function () {
+        const toggleBtn = document.getElementById('menuToggle');
+        const leftside = document.getElementById('leftside');
+
+        if (toggleBtn && leftside) {
+          toggleBtn.addEventListener('click', function () {
+            const isOpen = leftside.classList.toggle('open');
+            toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+          });
+
+          // Закрывать меню после клика по ссылке (удобно на мобильных)
+          leftside.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', function () {
+              if (window.innerWidth <= 900) {
+                leftside.classList.remove('open');
+                toggleBtn.setAttribute('aria-expanded', 'false');
+              }
+            });
+          });
+        }
+      })();
+    </script>
+    <!-- ===================== КОНЕЦ БЛОКА JS ===================== -->
+
+    <!-- Yandex.Metrika counter -->
+    <script >
+      ;(function (m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function () {
+            ;(m[i].a = m[i].a || []).push(arguments)
+          }
+        m[i].l = 1 * new Date()
+        ;(k = e.createElement(t)),
+          (a = e.getElementsByTagName(t)[0]),
+          (k.async = 1),
+          (k.src = r),
+          a.parentNode.insertBefore(k, a)
+      })(
+        window,
+        document,
+        "script",
+        "https://mc.yandex.ru/metrika/tag.js",
+        "ym"
+      )
+
+      ym(31371623, "init", {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+        webvisor: true,
+      })
+    </script>
+    <noscript
+      ><div>
+        <img
+          src="https://mc.yandex.ru/watch/31371623"
+          style="position: absolute; left: -9999px"
+          alt=""
+       ></div
+    ></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <script>
+      ;(function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r
+        ;(i[r] =
+          i[r] ||
+          function () {
+            ;(i[r].q = i[r].q || []).push(arguments)
+          }),
+          (i[r].l = 1 * new Date())
+        ;(a = s.createElement(o)), (m = s.getElementsByTagName(o)[0])
+        a.async = 1
+        a.src = g
+        m.parentNode.insertBefore(a, m)
+      })(
+        window,
+        document,
+        "script",
+        "//www.google-analytics.com/analytics.js",
+        "ga"
+      )
+
+      ga("create", "UA-64999055-1", "auto")
+      ga("send", "pageview")
+    </script>
+    <!-- Default Statcounter code for Nikanna.in
+https://nikanna.in -->
+    <script >
+      var sc_project = 12112565
+      var sc_invisible = 1
+      var sc_security = "a58d2aaf"
+    </script>
+    <script
+
+      src="https://www.statcounter.com/counter/counter.js"
+      async
+    ></script>
+    <noscript
+      ><div class="statcounter">
+        <a title="Web Analytics" href="https://statcounter.com/" target="_blank"
+          ><img
+            class="statcounter"
+            src="https://c.statcounter.com/12112565/0/a58d2aaf/1/"
+            alt="Web Analytics"
+        ></a></div
+    ></noscript>
+    <!-- End of Statcounter Code -->
+
+  </body>
+</html>

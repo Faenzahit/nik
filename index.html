@@ -1,23 +1,19 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
   <head>
     <title>Русские в Доминикане</title>
     <meta charset="utf-8">
- <meta name="viewport" content="width=device-width" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://nikanna.in/">
 
- <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <!--<meta name="viewport" content="width=device-width, initial-scale=0.1, maximum-scale=1.0, user-scalable=yes"> -->
-
     <!-- Не смотрите мой код, он очень плохой  -->
-    <!--<link rel="canonical" href="https://nikanna.in">-->
     <link
       rel="icon"
       href="https://nikanna.in/favicon.ico"
       type="image/x-icon"
     >
-   
-    <link rel="stylesheet" type="text/css" href="highslide/highslide.css" >
+
+    <!--<link rel="stylesheet" type="text/css" href="highslide/highslide.css" > -->
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" >
     <link rel="stylesheet" href="font-awesome/fa-viber.css" >
     <meta name="author" content="nik shnekenberg">
@@ -38,7 +34,7 @@
       href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic"
       rel="stylesheet"
       type="text/css"
-   >
+    >
     <meta name="yandex-verification" content="32e1b7bd08a17adf" >
     <meta name="cypr-verification" content="cf5772e3f88ef62eff85f3cacd11ebd9" >
     <meta
@@ -51,19 +47,146 @@
     >
     <meta name="ROBOTS" content="INDEX, FOLLOW" >
     <link rel="stylesheet" type="text/css" href="andreas.css" >
+
+    <!-- ===================== АДАПТИВНОСТЬ (добавлено) ===================== -->
+    <style>
+      /* Базовые правила, чтобы ничего не "убегало" за пределы экрана */
+      html {
+        box-sizing: border-box;
+      }
+      *, *:before, *:after {
+        box-sizing: inherit;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      /* Основной layout переводим на flex, но на десктопе это выглядит так же,
+         как и раньше (просто более гибко) */
+   /*   #wrap {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 100%;
+      }*/
+      #leftside {
+        flex: 0 0 auto;
+      }
+      #content {
+        flex: 1 1 auto;
+        min-width: 0; /* чтобы длинный текст/картинки не распирали колонку */
+      }
+
+      /* Кнопка-гамбургер: скрыта на десктопе */
+      .menu-toggle {
+        display: none;
+        width: 100%;
+        text-align: left;
+        background: #222;
+        color: #fff;
+        border: none;
+        padding: 14px 16px;
+        font-size: 18px;
+        cursor: pointer;
+        align-items: center;
+        gap: 10px;
+      }
+      .menu-toggle .bar,
+      .menu-toggle .bar:before,
+      .menu-toggle .bar:after {
+        content: "";
+        display: block;
+        width: 24px;
+        height: 3px;
+        background: #fff;
+        position: relative;
+      }
+      .menu-toggle .bar:before {
+        position: absolute;
+        top: -8px;
+      }
+      .menu-toggle .bar:after {
+        position: absolute;
+        top: 8px;
+      }
+
+      /* ===================== МОБИЛЬНАЯ ВЕРСИЯ ===================== */
+      @media (max-width: 900px) {
+        #wrap {
+          display: block;
+        }
+
+        .menu-toggle {
+          display: flex;
+        }
+
+        #leftside {
+          display: none;
+          width: 100%;
+          flex-basis: 100%;
+        }
+
+        #leftside.open {
+          display: block;
+        }
+
+        #leftside ul.avmenu {
+          width: 100%;
+        }
+
+        #leftside ul.avmenu li a {
+          display: block;
+          width: 100%;
+          padding: 10px 14px;
+        }
+
+        #content {
+          width: 100%;
+          flex-basis: 100%;
+          padding-left: 1px;
+          padding-right: 12px;
+        }
+
+        #header h1 {
+          font-size: 22px;
+          text-align: center;
+          padding: 10px;
+        }
+
+        .slideshow img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      @media (max-width: 480px) {
+        #header h1 {
+          font-size: 18px;
+        }
+        .round1 {
+          padding: 10px;
+        }
+      }
+    </style>
+    <!-- =================== КОНЕЦ БЛОКА АДАПТИВНОСТИ =================== -->
   </head>
 
   <body>
     <div id="wrap">
       <div id="header">
         <h1>Николай и Анна в Доминикане</h1>
-
-        <!--<P style=" position:  absolute; top:  165px; color: #FFFFFF;  ">Санкт-Петербург &nbsp; - &nbsp; Санто-Доминго</P>-->
       </div>
+
+      <!-- Кнопка гамбургер-меню, видна только на мобильных -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню" aria-expanded="false">
+        <span class="bar"></span>
+        <span>Меню</span>
+      </button>
+
       <div id="leftside">
-        <!--<H2 class=hide>Навигация по сайту:</H2>  -->
         <ul class="avmenu">
-          <li><a class="current" href="index.html">Главная</a></li>
+          <li><a class="current" href="./">Главная</a></li>
           <li><a href="page2.html">О нас</a></li>
           <li><a href="page3.html">Переезд</a></li>
           <li><a href="page4.html">Свадьба</a></li>
@@ -73,12 +196,12 @@
           <li><a href="page8.html">Бюджет</a></li>
           <li><a href="page9.html">Мои услуги</a></li>
           <li><a href="pro.html">Мои рассказы</a></li>
-          <li><a href="https://family.nikolai-shnekenberg.workers.dev/">Память</a></li>
+          <li><a href="https://family.nikolai-shnekenberg.workers.dev/" target="_blank">Память</a></li>
           <li><a href="time.html">Время</a></li>
           <li><a href="help.html">Помощь сайту</a></li>
           <li><a href="./nik/">Экскурсии</a></li>
-          <li><a href="web.html">Вебкамера</a></li>
-          <li><a href="wetter.html">Погода</a></li>
+          <!--<li><a href="web.html">Вебкамера</a></li>
+          <li><a href="wetter.html">Погода</a></li>-->
           <li><a href="pano.html">Панорама</a></li>
           <li><a href="video/magia.html">Магия</a></li>
           <li><a href="pooh/pooh.html">Мультик</a></li>
@@ -96,7 +219,6 @@
             <hr >
             <i class="fa fa-telegram fa-2x" style="color: blue"></i>&nbsp;
             <a href="https://t.me/Nikanna1" target="_blank" rel="nofollow">Telegram</a>
-            <!-- ссылка на Viber для мобильных -->
             <hr >
             <i class="fa fa-viber fa-2x"></i>&nbsp;&nbsp;<a
               href="viber://add?number=18098894417" target="_blank" rel="nofollow"
@@ -110,7 +232,6 @@
               href="https://www.messenger.com/t/nikolai.shnekenberg" target="_blank" rel="nofollow"
               >Messenger</a
             >
-            <!-- ссылка на Instagram -->
             <hr >
             <i class="fa fa-instagram fa-2x" style="color: red"></i
             >&nbsp;&nbsp;<a
@@ -118,7 +239,6 @@
               target="_blank"  rel="nofollow"
               >Instagram</a
             >
-            <!-- ссылка на телефон -->
             <hr >
             <i class="fa fa-phone fa-2x"></i>&nbsp;&nbsp;<a
               href="tel:+18098894417" target="_blank" rel="nofollow"
@@ -148,7 +268,7 @@
             На этом сайте можно почитать о нас, узнать, по какой причине мы
             оказались в Доминикане, увидеть наши фотографии и виды этой страны.
             Надеемся, что вы сможете почерпнуть здесь что-нибудь полезное для
-            вас. В меню слева читайте о наших доминиканских историях, о том, как
+            вас. В меню выбирайте заметки о наших доминиканских историях, о том, как
             мы поженились в Доминикане, о местной манере вождения, о поисках
             работы, способах получения ВНЖ и подключения интернета...
           </p>
@@ -163,7 +283,7 @@
     <img src="slider/7.jpg" alt="Николай и Анна" >
     <img src="slider/8.jpg" alt="Николай и Анна" >
     <img src="slider/9.jpg" alt="Николай и Анна" >
-    
+
 </div>
 
           <p   class=" pin">
@@ -209,7 +329,7 @@
               src="pics/index000003.jpg"
               alt="Juan Dolio"
               style="
-                padding: 8px;
+                padding: 3px;
                 background: #fff;
                 box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
               "
@@ -260,20 +380,10 @@
 
             <br>
 
-
-
-<!--<b>28 января 2005 - 28 января 2025 </b>
-У нас юбилей - мы прожили в Доминикане 20 лет!!!<br><small>(Кликните на иконку.)</small>
-<a href="time.html" target="_self"><img src="pics/20.png" width="150" height="133" alt="">  </a>-->
             <br >
-       <!--     <hr>  -->
-            <!-- money -->
-             <br>
-             <!--  -->
+              <br>
               <div class="round1">
             <h3 >Помощь Анне и Николаю</h3>
-
-            <!-- time -->
 
                <p   class=" pin" style=" text-align: justify">
                 Если у вас есть желание и возможность поддержать нас материально
@@ -292,13 +402,11 @@
 
               </p>
            </div>
-            <!-- money end -->
           </div>
         </div>
       </div>
 
 
-    </div>
     </div>
     <div id="footer">
       <br>
@@ -329,22 +437,49 @@
 
       <p>
         © 2005 - 2027
-        <a href="https://nikanna.in/">Николай и Анна в Доминикане</a>
+        <a href="./">Николай и Анна в Доминикане</a>
 
         <br >
       </p>
     </div>
-   
- <script>
-    const slides = document.querySelectorAll('.slideshow img');
-    let current = 0;
 
-    setInterval(() => {
-        slides[current].classList.remove('active');
-        current = (current + 1) % slides.length;
-        slides[current].classList.add('active');
-    }, 5000); // каждые 5 секунд
-</script>
+    <script>
+      const slides = document.querySelectorAll('.slideshow img');
+      let current = 0;
+
+      setInterval(() => {
+          slides[current].classList.remove('active');
+          current = (current + 1) % slides.length;
+          slides[current].classList.add('active');
+      }, 5000); // каждые 5 секунд
+    </script>
+
+    <!-- ===================== JS для гамбургер-меню (добавлено) ===================== -->
+    <script>
+      (function () {
+        const toggleBtn = document.getElementById('menuToggle');
+        const leftside = document.getElementById('leftside');
+
+        if (toggleBtn && leftside) {
+          toggleBtn.addEventListener('click', function () {
+            const isOpen = leftside.classList.toggle('open');
+            toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+          });
+
+          // Закрывать меню после клика по ссылке (удобно на мобильных)
+          leftside.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', function () {
+              if (window.innerWidth <= 900) {
+                leftside.classList.remove('open');
+                toggleBtn.setAttribute('aria-expanded', 'false');
+              }
+            });
+          });
+        }
+      })();
+    </script>
+    <!-- ===================== КОНЕЦ БЛОКА JS ===================== -->
+
     <!-- Yandex.Metrika counter -->
     <script >
       ;(function (m, e, t, r, i, k, a) {
@@ -383,7 +518,6 @@
        ></div
     ></noscript>
     <!-- /Yandex.Metrika counter -->
-    <!-- /Yandex.Metrika counter -->
     <script>
       ;(function (i, s, o, g, r, a, m) {
         i["GoogleAnalyticsObject"] = r
@@ -408,7 +542,6 @@
       ga("create", "UA-64999055-1", "auto")
       ga("send", "pageview")
     </script>
-    <!-- /Yandex.Metrika counter -->
     <!-- Default Statcounter code for Nikanna.in
 https://nikanna.in -->
     <script >
@@ -431,5 +564,6 @@ https://nikanna.in -->
         ></a></div
     ></noscript>
     <!-- End of Statcounter Code -->
+    </div>
   </body>
 </html>

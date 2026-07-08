@@ -1,86 +1,296 @@
-﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Русские в Доминикане</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://nikanna.in/">
 
-<HTML lang=ru xml:lang="ru" xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>О нас</TITLE>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
-<meta name="author" content="nik shnekenberg" >
-<meta name="description" content="Узнайте больше о нас" />
-<meta name="keywords" content="Николай и Анна в Доминикане, русские в Доминикане, гид Николай в Доминикане, Анна в Доминикане" />
-<meta name="google-site-verification" content="rOEwRm1qBwgFL1Ix6H4BIDnj-zgZsgcEKSDW6BnHfvE" />
-<meta name='yandex-verification' content='77cdce4d64f951fd' />
-<META NAME=ROBOTS" CONTENT="INDEX, FOLLOW">
-<link rel="canonical" href="https://nikanna.in/">
-<link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="andreas.css">
-<link rel="stylesheet" type="text/css" href="img_bottom1.css">
-<link rel="stylesheet" type="text/css" href="highslide/highslide.css" />
-<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-<link rel="stylesheet" href="font-awesome/fa-viber.css">
-</HEAD>
-<BODY>
-<DIV id=wrap>
-<DIV id=header>
-<H1>Николай и Анна в Доминикане</H1>
-<!--<P style=" position:  absolute; top:  165px"><font color="#FFFFFF">Санкт-Петербург - Санто-Доминго</font></P>-->
-</DIV>
-<DIV id=leftside >
+    <!-- Не смотрите мой код, он очень плохой  -->
+    <link
+      rel="icon"
+      href="https://nikanna.in/favicon.ico"
+      type="image/x-icon"
+    >
 
-<UL class=avmenu>
-<LI><A  href="./">Главная</A></LI>
-<LI><A class=current href="page2.html">О нас</A></LI>
-<LI><A href="page3.html">Переезд</A></LI>
-<LI><A href="page4.html">Свадьба</A></LI>
-<LI><A href="page5.html">ВНЖ</A></LI>
-<LI><A href="page6.html">ПМЖ</A></LI>
-<LI><A href="page7.html">Работа</A></LI>
-<LI><A href="page8.html">Бюджет</A></LI>
-<LI><A href="page9.html">Мои услуги</A></LI>
-<LI><A href="pro.html">Мои рассказы</A></LI>
-<LI><A href="viktor.html">Памяти отца</A></LI>
-<LI><A href="time.html">Время</A></LI>
-<LI><A href="help.html">Помощь сайту</A></LI>
-<LI><A href="./nik/" >Экскурсии</A></LI>
-</UL>
+    <link rel="stylesheet" type="text/css" href="highslide/highslide.css" >
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="font-awesome/fa-viber.css" >
+    <meta name="author" content="nik shnekenberg">
+    <meta
+      name="description"
+      content="русские в Доминикане,  Николай и Анна в Доминикане, работа в Доминикане, правда о жизни в Доминикане, русский гид в Доминикане, жизнь русской семьи в Доминикане,  история любви"
+    >
+    <meta
+      name="keywords"
+      content="русские в Доминикане, Николай и Анна в Доминикане, работа в Доминикане, правда о жизни в Доминикане, жизнь русской семьи в Доминикане, история любви"
+    >
+    <link rel="preconnect" href="https://fonts.gstatic.com" >
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap"
+      rel="stylesheet"
+    >
+    <link
+      href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic"
+      rel="stylesheet"
+      type="text/css"
+    >
+    <meta name="yandex-verification" content="32e1b7bd08a17adf" >
+    <meta name="cypr-verification" content="cf5772e3f88ef62eff85f3cacd11ebd9" >
+    <meta
+      name="google-site-verification"
+      content="9YzBiMby_yY1sbyVKigyW56zpGRNiYgXMUNgnVntG4s"
+    >
+    <meta
+      name="google-site-verification"
+      content="YThvaxxW1kP4_MJlSUkXj-uQNIWAuCnwcQGtjtoopoI"
+    >
+    <meta name="ROBOTS" content="INDEX, FOLLOW" >
+    <link rel="stylesheet" type="text/css" href="andreas.css" >
 
-</DIV>
-  <!-- Центр1 -->
+    <!-- ===================== АДАПТИВНОСТЬ (добавлено) ===================== -->
+    <style>
+      /* Базовые правила, чтобы ничего не "убегало" за пределы экрана */
+      html {
+        box-sizing: border-box;
+      }
+      *, *:before, *:after {
+        box-sizing: inherit;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      /* Основной layout переводим на flex, но на десктопе это выглядит так же,
+         как и раньше (просто более гибко) */
+   /*   #wrap {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 100%;
+      }*/
+      #leftside {
+        flex: 0 0 auto;
+      }
+      #content {
+        flex: 1 1 auto;
+        min-width: 0; /* чтобы длинный текст/картинки не распирали колонку */
+      }
+
+      /* Кнопка-гамбургер: скрыта на десктопе */
+      .menu-toggle {
+        display: none;
+        width: 100%;
+        text-align: left;
+        background: #222;
+        color: #fff;
+        border: none;
+        padding: 14px 16px;
+        font-size: 18px;
+        cursor: pointer;
+        align-items: center;
+        gap: 10px;
+      }
+      .menu-toggle .bar,
+      .menu-toggle .bar:before,
+      .menu-toggle .bar:after {
+        content: "";
+        display: block;
+        width: 24px;
+        height: 3px;
+        background: #fff;
+        position: relative;
+      }
+      .menu-toggle .bar:before {
+        position: absolute;
+        top: -8px;
+      }
+      .menu-toggle .bar:after {
+        position: absolute;
+        top: 8px;
+      }
+
+      /* ===================== МОБИЛЬНАЯ ВЕРСИЯ ===================== */
+      @media (max-width: 900px) {
+        #wrap {
+          display: block;
+        }
+
+        .menu-toggle {
+          display: flex;
+        }
+
+        #leftside {
+          display: none;
+          width: 100%;
+          flex-basis: 100%;
+        }
+
+        #leftside.open {
+          display: block;
+        }
+
+        #leftside ul.avmenu {
+          width: 100%;
+        }
+
+        #leftside ul.avmenu li a {
+          display: block;
+          width: 100%;
+          padding: 10px 14px;
+        }
+
+        #content {
+          width: 100%;
+          flex-basis: 100%;
+          padding-left: 1px;
+          padding-right: 12px;
+        }
+
+        #header h1 {
+          font-size: 22px;
+          text-align: center;
+          padding: 10px;
+        }
+
+        .slideshow img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      @media (max-width: 480px) {
+        #header h1 {
+          font-size: 18px;
+        }
+        .round1 {
+          padding: 10px;
+        }
+      }
+    </style>
+    <!-- =================== КОНЕЦ БЛОКА АДАПТИВНОСТИ =================== -->
+  </head>
+
+  <body>
+    <div id="wrap">
+      <div id="header">
+        <h1>Николай и Анна в Доминикане</h1>
+      </div>
+
+      <!-- Кнопка гамбургер-меню, видна только на мобильных -->
+      <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню" aria-expanded="false">
+        <span class="bar"></span>
+        <span>Меню</span>
+      </button>
+
+      <div id="leftside">
+        <ul class="avmenu">
+          <li><a  href="./">Главная</a></li>
+          <li><a class="current" href="page2.html">О нас</a></li>
+          <li><a href="page3.html">Переезд</a></li>
+          <li><a href="page4.html">Свадьба</a></li>
+          <li><a href="page5.html">ВНЖ</a></li>
+          <li><a href="page6.html">ПМЖ</a></li>
+          <li><a href="page7.html">Работа</a></li>
+          <li><a href="page8.html">Бюджет</a></li>
+          <li><a href="page9.html">Мои услуги</a></li>
+          <li><a href="pro.html">Мои рассказы</a></li>
+          <li><a href="https://family.nikolai-shnekenberg.workers.dev/" target="_blank">Память</a></li>
+          <li><a href="time.html">Время</a></li>
+          <li><a href="help.html">Помощь сайту</a></li>
+          <li><a href="./nik/">Экскурсии</a></li>
+          <!--<li><a href="web.html">Вебкамера</a></li>
+          <li><a href="wetter.html">Погода</a></li>-->
+          <li><a href="pano.html">Панорама</a></li>
+          <li><a href="video/magia.html">Магия</a></li>
+          <li><a href="pooh/pooh.html">Мультик</a></li>
+          <li><a href="matrix.html">Матрица</a></li>
+        </ul>
+        <div>&nbsp;</div>
+
+        <div class="announce" style="font-size: 14px">
+          <h2 style="font-size: 18px">Контакты</h2>
+          <hr>
+
+            <i class="fa fa-whatsapp fa-2x" style="color: green"></i
+            >&nbsp;&nbsp;
+            <a href="https://wa.me/18098894417" target="_blank" rel="nofollow">WhatsApp</a>
+            <hr >
+            <i class="fa fa-telegram fa-2x" style="color: blue"></i>&nbsp;
+            <a href="https://t.me/Nikanna1" target="_blank" rel="nofollow">Telegram</a>
+            <hr >
+            <i class="fa fa-viber fa-2x"></i>&nbsp;&nbsp;<a
+              href="viber://add?number=18098894417" target="_blank" rel="nofollow"
+              >Viber</a
+            >
+
+            <hr >
+
+            <i class="fa fa-facebook fa-2x" style="color: DarkBlue"></i
+            >&nbsp;&nbsp;<a
+              href="https://www.messenger.com/t/nikolai.shnekenberg" target="_blank" rel="nofollow"
+              >Messenger</a
+            >
+            <hr >
+            <i class="fa fa-instagram fa-2x" style="color: red"></i
+            >&nbsp;&nbsp;<a
+              href="https://www.instagram.com/nikannadominicana"
+              target="_blank"  rel="nofollow"
+              >Instagram</a
+            >
+            <hr >
+            <i class="fa fa-phone fa-2x"></i>&nbsp;&nbsp;<a
+              href="tel:+18098894417" target="_blank" rel="nofollow"
+              >Mobil</a
+            >
+            <hr >
+            <i class="fa fa-envelope-open-o fa-2x" style="color: green"></i>
+            &nbsp;&nbsp;
+            <a
+              href="/cdn-cgi/l/email-protection#790916161114161617390018570b0c"
+              title="ПОЧТА" target="_blank" rel="nofollow"
+              >ПОЧТА</a
+            >
+
+        </div>
+      </div>
+       <!-- Центр1 -->
 <DIV id=content>
 <div id=fona>
 <h2>О нас</h2><hr width="200" color="#E4E4E4" size="1" align="left">
 		<p align="justify">
  Итак, нас зовут Анна и Николай. История наша началась давно, в 1982 году, когда мы, собственно говоря, и познакомились. <!--Анютке в то время было три годика, а я уже отслужил срочную службу.--> Поступив на курсы водителей, я познакомился с хорошим парнем Димой, у которого была жена и две дочки, одной из которых и была Анюта. Мы были больше, чем друзья. Мы были братья. И его семья была моей семьёй. И для детей я был вторым папой. </p>
 <P align=center>
-<IMG  alt="" hspace=0 src="pics/img000001.jpg" style="padding: 8px; background: #fff; box-shadow: 1px 1px 5px rgba(0, 0, 0, .8);" ></P>
+<IMG  alt="" hspace=0 src="pics/img000001.jpg" style="padding: 3px; background: #fff; box-shadow: 1px 1px 5px rgba(0, 0, 0, .8);" ></P>
 
 <p>И, казалось, никакие проблемы не смогут разрушить нашу дружбу.</p>
 <P align=center>
-<IMG  alt="" hspace=0 src="images/d3.jpg" style="padding: 8px; background: #fff; box-shadow: 1px 1px 5px rgba(0, 0, 0, .8);" >
+<IMG  alt="" hspace=0 src="images/d3.jpg" style="padding: 3px; background: #fff; box-shadow: 1px 1px 5px rgba(0, 0, 0, .8);" >
  </P>
  <p>Сколько тропинок было исхожено вместе.</p>
 <P align=center>
-<IMG  alt="" hspace=0 src="images/d2.jpg" style="padding: 8px; background: #fff; box-shadow: 1px 1px 5px rgba(0, 0, 0, .8);" >
+<IMG  alt="" hspace=0 src="images/d2.jpg" style="padding: 3px; background: #fff; box-shadow: 1px 1px 5px rgba(0, 0, 0, .8);" >
  </P>
  <p>Сколько было изъезжено дорог.  </p>
  <P align=center>
-<IMG  alt="" hspace=0 src="images/d1.jpg" style="padding: 8px; background: #fff; box-shadow: 1px 1px 5px rgba(0, 0, 0, .8);" >
+<IMG  alt="" hspace=0 src="images/d1.jpg" style="padding: 3px; background: #fff; box-shadow: 1px 1px 5px rgba(0, 0, 0, .8);" >
  </P>
  <p>Мы были молоды и думали о том, что даже когда состаримся, будем крепкими старичками в шортах..</p>
  <P align=center>
-<IMG  alt="" hspace=0 src="images/d5.jpg" style="padding: 8px; background: #fff; box-shadow: 1px 1px 5px rgba(0, 0, 0, .8);" >
+<IMG  alt="" hspace=0 src="images/d5.jpg" style="padding: 3px; background: #fff; box-shadow: 1px 1px 5px rgba(0, 0, 0, .8);" >
  </P>
  <p>Сколько было выпито разного-всякого.</p>
 <P align=center>
-<IMG  alt="" hspace=0 src="images/d6.jpg" style="padding: 8px; background: #fff; box-shadow: 1px 1px 5px rgba(0, 0, 0, .8);" >
+<IMG  alt="" hspace=0 src="images/d6.jpg" style="padding: 3px; background: #fff; box-shadow: 1px 1px 5px rgba(0, 0, 0, .8);" >
  </P>
 <p>И даже мой отъезд в Германию не мог прекратить нашу дружбу. <br>Я приглашал друга и его детей в гости.</p>
 <P align=center>
-<IMG  alt="" hspace=0 src="images/d4.jpg" style="padding: 8px; background: #fff; box-shadow: 1px 1px 5px rgba(0, 0, 0, .8);" >
+<IMG  alt="" hspace=0 src="images/d4.jpg" style="padding: 3px; background: #fff; box-shadow: 1px 1px 5px rgba(0, 0, 0, .8);" >
  </P>
 <p>И кто, как не он, ухаживал за мной, когда я после комы полгода выкарабкивался из лап смерти.</p>
 <P align=center>
-<IMG  alt="" hspace=0 src="images/d7.jpg" style="padding: 8px; background: #fff; box-shadow: 1px 1px 5px rgba(0, 0, 0, .8);" >
+<IMG  alt="" hspace=0 src="images/d7.jpg" style="padding: 3px; background: #fff; box-shadow: 1px 1px 5px rgba(0, 0, 0, .8);" >
  </P>
  <!--  -->
  <P align="justify">
@@ -88,16 +298,16 @@
 Анна повзрослела и превратилась в прекрасную девушку.
 И вот в 2002 году мы поняли, что любим друг друга. И что хотим быть вместе на всю жизнь. Но, к сожалению, её родители восприняли это в штыки. И сразу кончилась наша дружба. В одно мгновение из друга я превратился во врага. Все их силы были брошены на то, чтобы не дать нам возможности быть вместе. Дело дошло до угроз. Было страшно смотреть в налитые кровью глаза бывшего друга, который, как сумасшедший, только повторял, что убъёт и меня и дочку, а потом покончит и с собой. Анина бабушка кричала ей в лицо проклятия и обещала потратить все свои пенсионные сбережения на то, чтобы уничтожить меня физически.  Всё напоминало сумасшедший дом или глупый американский фильм ужасов. Попытки поговорить с другом спокойно и по-человечески не давали никакого результата.  Пытались обратиться в милицию с заявлением об угрозах и в ответ услышали циничное: "когда будет труп, тогда и обращайтесь"...<br>Жизнь стала невыносимой и надо было что-то решать.</p>
 <p style="text-align: center"><em><strong>За чаем с друзьями была выбрана точка на глобусе</strong></em><br>
-<img src="images/fr2.jpg" width="500" height="375" style="padding: 8px; background: #fff; box-shadow: 1px 1px 5px rgba(0, 0, 0, .8);"><br><br>
+<img src="images/fr2.jpg" width="500" height="375" style="padding: 3px; background: #fff; box-shadow: 1px 1px 5px rgba(0, 0, 0, .8);"><br><br>
 <em><strong>Пришлось долго рассуждать о правильности решения</strong></em><br>
-<img src="images/uf.jpg" width="500" height="375" style="padding: 8px; background: #fff; box-shadow: 1px 1px 5px rgba(0, 0, 0, .8);"><br> <br>
+<img src="images/uf.jpg" width="500" height="375" style="padding: 3px; background: #fff; box-shadow: 1px 1px 5px rgba(0, 0, 0, .8);"><br> <br>
 <em><strong>На прощание слепили снеговика в парке</strong></em><br>
-<img src="images/fr1.jpg" width="500" height="409" style="padding: 8px; background: #fff; box-shadow: 1px 1px 5px rgba(0, 0, 0, .8);"><br><br>
+<img src="images/fr1.jpg" width="500" height="409" style="padding: 3px; background: #fff; box-shadow: 1px 1px 5px rgba(0, 0, 0, .8);"><br><br>
 <em><strong>За три дня до отъезда с вещами у друга Андрея</strong></em><br>
-<img src="images/fr.jpg" width="500" height="375" style="padding: 8px; background: #fff; box-shadow: 1px 1px 5px rgba(0, 0, 0, .8);"><br></p>
+<img src="images/fr.jpg" width="500" height="375" style="padding: 3px; background: #fff; box-shadow: 1px 1px 5px rgba(0, 0, 0, .8);"><br></p>
 <p align="justify">Конечно, что наша любовь оказалась сильнее. Мне удалось срочно, но за копейки, продать свою комнату в коммуналке и на вырученные деньги купить две путёвки в Доминиканскую республику. Страна была выбрана за безвизовый въезд и отсутствия депортации. Это был очень авантюрный поступок и мы никому не советуем повторять его. Но ради желания быть вместе, нам ничего не осталось другого, как в 2005 покинуть любимый Питер и улететь в Доминиканскую республику, где мы в данный момент и живём. Теперь у нас есть возможность каждый день быть вместе - и мы счастливы!</p>
 <P align=center>
-<IMG  alt="" hspace=0 src="pics/page2000001.jpg" style="padding: 8px; background: #fff; box-shadow: 1px 1px 5px rgba(0, 0, 0, .8);"></P>
+<IMG  alt="" hspace=0 src="pics/page2000001.jpg" style="padding: 3px; background: #fff; box-shadow: 1px 1px 5px rgba(0, 0, 0, .8);"></P>
 
 <!--  -->
 
@@ -106,38 +316,162 @@
 <!--  -->
 </div>  </div>
 <!-- Центр2 -->
-</DIV>
-<DIV id=footer><br>
-<small>Сайт был основан в 2005 году и</small>
-<SCRIPT language=JavaScript>
-<!--
+    <div id="footer">
+      <br>
+      <small>Сайт был основан в 2005 году и</small>
 
-d0 = new Date('january 28, 2005');
+      <script
+        data-cfasync="false"
+        src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+      ></script>
+      <script >
+        <!--
 
-d1 = new Date();
+        d0 = new Date("january 28, 2005")
 
-dt = (d1.getTime() - d0.getTime()) / (1000*60*60*24);
+        d1 = new Date()
 
-document.write('<SMALL>');
+        dt = (d1.getTime() - d0.getTime()) / (1000 * 60 * 60 * 24)
 
-document.write('существует <B>' + Math.round(dt) + '</B>-й день!');
+        document.write("<SMALL>")
 
-document.write('</SMALL>');
+        document.write("существует <B>" + Math.round(dt) + "</B>-й день!")
 
---> </SCRIPT>
+        document.write("</SMALL>")
 
-<P>© 2005 - 2027 <A href="https://nikanna.in">Николай и Анна в Доминикане</A></P>
-</DIV>   
-<!--  -->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        -->
+      </script>
+      <br >
 
-  ga('create', 'UA-64999055-1', 'auto');
-  ga('send', 'pageview');
+      <p>
+        © 2005 - 2027
+        <a href="./">Николай и Анна в Доминикане</a>
 
-</script>
-<!--  -->
-</BODY></HTML>
+        <br >
+      </p>
+    </div>
+
+    <script>
+      const slides = document.querySelectorAll('.slideshow img');
+      let current = 0;
+
+      setInterval(() => {
+          slides[current].classList.remove('active');
+          current = (current + 1) % slides.length;
+          slides[current].classList.add('active');
+      }, 5000); // каждые 5 секунд
+    </script>
+
+    <!-- ===================== JS для гамбургер-меню (добавлено) ===================== -->
+    <script>
+      (function () {
+        const toggleBtn = document.getElementById('menuToggle');
+        const leftside = document.getElementById('leftside');
+
+        if (toggleBtn && leftside) {
+          toggleBtn.addEventListener('click', function () {
+            const isOpen = leftside.classList.toggle('open');
+            toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+          });
+
+          // Закрывать меню после клика по ссылке (удобно на мобильных)
+          leftside.querySelectorAll('a').forEach(function (link) {
+            link.addEventListener('click', function () {
+              if (window.innerWidth <= 900) {
+                leftside.classList.remove('open');
+                toggleBtn.setAttribute('aria-expanded', 'false');
+              }
+            });
+          });
+        }
+      })();
+    </script>
+    <!-- ===================== КОНЕЦ БЛОКА JS ===================== -->
+
+    <!-- Yandex.Metrika counter -->
+    <script >
+      ;(function (m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function () {
+            ;(m[i].a = m[i].a || []).push(arguments)
+          }
+        m[i].l = 1 * new Date()
+        ;(k = e.createElement(t)),
+          (a = e.getElementsByTagName(t)[0]),
+          (k.async = 1),
+          (k.src = r),
+          a.parentNode.insertBefore(k, a)
+      })(
+        window,
+        document,
+        "script",
+        "https://mc.yandex.ru/metrika/tag.js",
+        "ym"
+      )
+
+      ym(31371623, "init", {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+        webvisor: true,
+      })
+    </script>
+    <noscript
+      ><div>
+        <img
+          src="https://mc.yandex.ru/watch/31371623"
+          style="position: absolute; left: -9999px"
+          alt=""
+       ></div
+    ></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <script>
+      ;(function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r
+        ;(i[r] =
+          i[r] ||
+          function () {
+            ;(i[r].q = i[r].q || []).push(arguments)
+          }),
+          (i[r].l = 1 * new Date())
+        ;(a = s.createElement(o)), (m = s.getElementsByTagName(o)[0])
+        a.async = 1
+        a.src = g
+        m.parentNode.insertBefore(a, m)
+      })(
+        window,
+        document,
+        "script",
+        "//www.google-analytics.com/analytics.js",
+        "ga"
+      )
+
+      ga("create", "UA-64999055-1", "auto")
+      ga("send", "pageview")
+    </script>
+    <!-- Default Statcounter code for Nikanna.in
+https://nikanna.in -->
+    <script >
+      var sc_project = 12112565
+      var sc_invisible = 1
+      var sc_security = "a58d2aaf"
+    </script>
+    <script
+
+      src="https://www.statcounter.com/counter/counter.js"
+      async
+    ></script>
+    <noscript
+      ><div class="statcounter">
+        <a title="Web Analytics" href="https://statcounter.com/" target="_blank"
+          ><img
+            class="statcounter"
+            src="https://c.statcounter.com/12112565/0/a58d2aaf/1/"
+            alt="Web Analytics"
+        ></a></div
+    ></noscript>
+    <!-- End of Statcounter Code -->
+    </div>
+  </body>
+</html>

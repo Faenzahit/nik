@@ -3,14 +3,103 @@
 <title>Гостевая книга</title>
 
 <link rel="stylesheet" type="text/css" href="files/style.css">
+<link rel="stylesheet" type="text/css" href="andreas.css">
 <meta charset="utf-8">
+ <!-- ===================== АДАПТИВНОСТЬ (добавлено) ===================== -->
+    <style>
+      /* Базовые правила, чтобы ничего не "убегало" за пределы экрана */
+      html {
+        box-sizing: border-box;
+      }
+      *, *:before, *:after {
+        box-sizing: inherit;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
 
+      /* Основной layout переводим на flex, но на десктопе это выглядит так же,
+         как и раньше (просто более гибко) */
+   /*   #wrap {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 100%;
+      }*/
+
+      #content {
+        flex: 1 1 auto;
+        min-width: 0; /* чтобы длинный текст/картинки не распирали колонку */
+      }
+
+
+
+      /* ===================== МОБИЛЬНАЯ ВЕРСИЯ ===================== */
+      @media (max-width: 900px) {
+        #wrap {
+          display: block;
+        }
+
+       body {
+    /* clamp(минимальный_размер, адаптивный_размер, максимальный_размер) */
+    font-size: clamp(16px, 1.2vw + 1rem, 20px);
+    line-height: 1.6;
+}
+
+        #content {
+          width: 100%;
+          flex-basis: 100%;
+          padding-left: 1px;
+          padding-right: 12px;
+        }
+        #table {
+           width: 100%;
+          flex-basis: 100%;
+          padding-left: 1px;
+          padding-right: 12px;
+        }
+        #td {
+           width: 100%;
+          flex-basis: 100%;
+          padding-left: 1px;
+          padding-right: 12px;
+        }
+           #tr {
+           width: 100%;
+          flex-basis: 100%;
+          padding-left: 1px;
+          padding-right: 12px;
+        }
+
+        #header h3 {
+          font-size: 22px;
+          text-align: center;
+          padding: 10px;
+        }
+
+        .slideshow img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      @media (max-width: 480px) {
+        #header h1 {
+          font-size: 18px;
+        }
+        .round1 {
+          padding: 10px;
+        }
+      }
+    </style>
+    <!-- =================== КОНЕЦ БЛОКА АДАПТИВНОСТИ =================== -->
 </head>
 <body >
-<center><a href="http://nikanna.in"><h3>Русские в Доминикане</h3></a> </Center>
+<center><a href="./"><br><h3>Русские в Доминикане</h3></a> </center>
 
 
-
+ <div id="content">
 <table align="center" cellpadding="0" cellspacing="0" width="900"><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
@@ -670,27 +759,23 @@ pisat'!<br>Zhdu svjazi s Vami,<br>S uvazheniem, ALexander.<br><br><b><font color
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
-<td><b><a href="mailto:le7967@yandex.ru">Дмитрий</a> (21.04.2013 13:50:25)</b><br>
-<em>Знаете ли вы что нибудь о проекте SolCitY?<br><br><b><font color="blue">О нём знаю не только я:<br><a href="http://www.dominicanoff.com/forum/f5/10855.htm">http://www.dominicanoff.com/forum/f5/10855.htm</a> <br><a href="http://www.dominicanoff.com/forum/f56/6690.htm">http://www.dominicanoff.com/forum/f56/6690.htm</a> <br>Читайте. </font></b></em><br>
-<div align="right">
 
-<table><tbody><tr><td bgcolor="#B2FFBE">
-<b><a href="http://rd=30&amp;type=1&amp;page=2">.P.</a></b></td><td>&nbsp;&nbsp;</td><td bgcolor="#FFADBA"><a href="http://id=30&amp;type=1&amp;page=2">.X.</a></td><td> &nbsp;&nbsp; 29
-</td></tr></tbody></table>
-</div>
+<td><b><a href="mailto:le7967@yandex.ru">Дмитрий</a> (21.04.2013 13:50:25)</b><br>
+Знаете ли вы что нибудь о проекте SolCitY?<br><br><b><font color="blue">О нём знаю не только я:<br><a href="http://www.dominicanoff.com/forum/f5/10855.htm">http://www.dominicanoff.com/forum/f5/10855.htm</a> <br><a href="http://www.dominicanoff.com/forum/f56/6690.htm">http://www.dominicanoff.com/forum/f56/6690.htm</a> <br>Читайте. </font></b></<br>
+
 </td>
 <td background="files/6.gif">&nbsp;</td>
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:heriberto@yandex.ru">Julio Encarnacion</a> (13.04.2013 13:07:51)</b><br>
-<em>Hola!!!Mi nombre es Julio,una ves te llame desde Moscu,y te dije te
+<em>Hola!!!Mi nombre es Julio,una ves te llame desde Moscu, y te dije te
 tu estabas aplatanado en Dominicana!!!!.Yo tengo viviendo en Moscu desde
  el a&amp;#241;o 1986,aqu&amp;#237; tambi&amp;#233;n hay buen racismo y
 aunque yo tengo doble ciudadan&amp;#237;a,aqu&amp;#237; yo no me
@@ -727,7 +812,7 @@ comprenden.Escr&amp;#237;beme:heriberto@yandex.ru<br><br><br><b><font color="blu
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Дмитрий</a> (07.04.2013 09:59:39)</b><br>
@@ -781,7 +866,7 @@ comprenden.Escr&amp;#237;beme:heriberto@yandex.ru<br><br><br><b><font color="blu
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Дмитрий</a> (06.04.2013 15:46:34)</b><br>
@@ -836,7 +921,7 @@ comprenden.Escr&amp;#237;beme:heriberto@yandex.ru<br><br><br><b><font color="blu
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Дмитрий</a> (06.04.2013 13:55:52)</b><br>
@@ -870,7 +955,7 @@ try1=Russia&amp;country2=Dominican+Republic&amp;city1=Moscow&amp;city2=Santo+Dom
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:Naumova333@mail.ru">Kris</a> (25.03.2013 09:21:01)</b><br>
@@ -898,7 +983,7 @@ try1=Russia&amp;country2=Dominican+Republic&amp;city1=Moscow&amp;city2=Santo+Dom
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Young</a> (22.03.2013 12:55:41)</b><br>
@@ -919,7 +1004,7 @@ Paraiso, Don Pedro, Plaza Real, Meridiana, Albatros etc. Пляжи у нас
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:kat070654@yandex.ru">Катя</a> (21.02.2013 14:25:24)</b><br>
@@ -960,7 +1045,7 @@ Paraiso, Don Pedro, Plaza Real, Meridiana, Albatros etc. Пляжи у нас
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:14millimetrov@gmail.com">Павел</a> (11.02.2013 01:11:44)</b><br>
@@ -1007,7 +1092,7 @@ Paraiso, Don Pedro, Plaza Real, Meridiana, Albatros etc. Пляжи у нас
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:kat070654@yandex.ru">Катерина</a> (06.02.2013 01:25:32)</b><br>
@@ -1029,7 +1114,7 @@ Paraiso, Don Pedro, Plaza Real, Meridiana, Albatros etc. Пляжи у нас
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:sergeion@gmail.com">Сергей</a> (31.01.2013 02:19:44)</b><br>
@@ -1055,7 +1140,7 @@ Paraiso, Don Pedro, Plaza Real, Meridiana, Albatros etc. Пляжи у нас
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Инна</a> (27.01.2013 14:06:08)</b><br>
@@ -1078,7 +1163,7 @@ Paraiso, Don Pedro, Plaza Real, Meridiana, Albatros etc. Пляжи у нас
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:kat070654@yandex.ru">Катерина</a> (25.01.2013 05:08:16)</b><br>
@@ -1103,7 +1188,7 @@ Paraiso, Don Pedro, Plaza Real, Meridiana, Albatros etc. Пляжи у нас
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:andrimarshal@bk.ru">Андрей</a> (21.01.2013 12:04:25)</b><br>
@@ -1138,7 +1223,7 @@ Paraiso, Don Pedro, Plaza Real, Meridiana, Albatros etc. Пляжи у нас
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:kat070654@yandex.ru">Катерина</a> (21.01.2013 03:16:57)</b><br>
@@ -1166,7 +1251,7 @@ Paraiso, Don Pedro, Plaza Real, Meridiana, Albatros etc. Пляжи у нас
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:smakeev@yandex.ru">Сергей</a> (15.01.2013 02:40:56)</b><br>
@@ -1198,7 +1283,7 @@ Paraiso, Don Pedro, Plaza Real, Meridiana, Albatros etc. Пляжи у нас
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:dok.kulesh@yande%D1%85.ru">Сергей</a> (29.12.2012 11:59:36)</b><br>
@@ -1235,7 +1320,7 @@ Paraiso, Don Pedro, Plaza Real, Meridiana, Albatros etc. Пляжи у нас
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
- <table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+ <table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:dok.kulesh@yandex.ru">Сергей</a> (29.12.2012 11:32:43)</b><br>
@@ -1255,7 +1340,7 @@ Paraiso, Don Pedro, Plaza Real, Meridiana, Albatros etc. Пляжи у нас
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:serg12@gmail.com">Сергей</a> (20.12.2012 13:14:08)</b><br>
@@ -1276,7 +1361,7 @@ Paraiso, Don Pedro, Plaza Real, Meridiana, Albatros etc. Пляжи у нас
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:ml.sweed@gmail.com">Marina &amp; Larsen</a> (05.12.2012 13:09:44)</b><br>
@@ -1297,7 +1382,7 @@ Paraiso, Don Pedro, Plaza Real, Meridiana, Albatros etc. Пляжи у нас
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:savin@gmail.com">Александр</a> (25.11.2012 09:07:25)</b><br>
@@ -1313,7 +1398,7 @@ Paraiso, Don Pedro, Plaza Real, Meridiana, Albatros etc. Пляжи у нас
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:prt@mail.ru">Павел</a> (21.11.2012 18:54:11)</b><br>
@@ -1329,7 +1414,7 @@ Paraiso, Don Pedro, Plaza Real, Meridiana, Albatros etc. Пляжи у нас
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:Suvorov6666@gmail.com">Александр</a> (23.08.2012 03:47:41)</b><br>
@@ -1345,7 +1430,7 @@ Paraiso, Don Pedro, Plaza Real, Meridiana, Albatros etc. Пляжи у нас
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:LykaninVU">Валерий</a> (30.06.2012 12:28:47)</b><br>
@@ -1366,7 +1451,7 @@ Paraiso, Don Pedro, Plaza Real, Meridiana, Albatros etc. Пляжи у нас
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:lukanin.60@mail.ru">Валерий</a> (30.06.2012 06:10:30)</b><br>
@@ -1390,7 +1475,7 @@ Paraiso, Don Pedro, Plaza Real, Meridiana, Albatros etc. Пляжи у нас
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:alex.savin@mail.ru">Александр</a> (21.06.2012 17:09:10)</b><br>
@@ -1416,7 +1501,7 @@ Paraiso, Don Pedro, Plaza Real, Meridiana, Albatros etc. Пляжи у нас
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:vnt@gmail.com">Валерий и Надежда</a> (20.06.2012 18:56:23)</b><br>
@@ -1433,7 +1518,7 @@ Paraiso, Don Pedro, Plaza Real, Meridiana, Albatros etc. Пляжи у нас
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:galaxymen@ya.ru">Странник</a> (01.06.2012 04:17:23)</b><br>
@@ -1459,7 +1544,7 @@ Paraiso, Don Pedro, Plaza Real, Meridiana, Albatros etc. Пляжи у нас
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Дмитрий</a> (27.05.2012 01:59:03)</b><br>
@@ -1502,7 +1587,7 @@ Paraiso, Don Pedro, Plaza Real, Meridiana, Albatros etc. Пляжи у нас
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:danil@starlink.ru">Никита</a> (05.04.2012 08:28:35)</b><br>
@@ -1529,7 +1614,7 @@ Paraiso, Don Pedro, Plaza Real, Meridiana, Albatros etc. Пляжи у нас
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Варвара</a> (02.04.2012 09:50:40)</b><br>
@@ -1545,7 +1630,7 @@ Paraiso, Don Pedro, Plaza Real, Meridiana, Albatros etc. Пляжи у нас
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:viktoria2012@hotmail.com">варвара</a> (01.04.2012 16:28:59)</b><br>
@@ -1570,7 +1655,7 @@ Paraiso, Don Pedro, Plaza Real, Meridiana, Albatros etc. Пляжи у нас
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:club-klondike@mail.ru">иван</a> (26.03.2012 07:02:49)</b><br>
@@ -1598,7 +1683,7 @@ Paraiso, Don Pedro, Plaza Real, Meridiana, Albatros etc. Пляжи у нас
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Михаил</a> (24.03.2012 15:29:54)</b><br>
@@ -1616,7 +1701,7 @@ Paraiso, Don Pedro, Plaza Real, Meridiana, Albatros etc. Пляжи у нас
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:denis-by@list.ru">Денис</a> (19.03.2012 00:38:06)</b><br>
@@ -1641,7 +1726,7 @@ wi-fi. Есть очень-очень бюджетный вариант за 450
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:galaxymen@narod.ru">Странник</a> (13.03.2012 14:53:58)</b><br>
@@ -1662,7 +1747,7 @@ wi-fi. Есть очень-очень бюджетный вариант за 450
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:capri@rieder.net.py">Юрий</a> (08.03.2012 12:21:01)</b><br>
@@ -1681,7 +1766,7 @@ wi-fi. Есть очень-очень бюджетный вариант за 450
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:y_e_a80@yahoo.com">евгений</a> (01.03.2012 12:40:12)</b><br>
@@ -1703,7 +1788,7 @@ wi-fi. Есть очень-очень бюджетный вариант за 450
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:bigfinishingguzzled@mail.ru">Роман</a> (22.02.2012 12:17:40)</b><br>
@@ -1726,7 +1811,7 @@ wi-fi. Есть очень-очень бюджетный вариант за 450
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:vassskova@ukr.net">АЛЛА</a> (13.02.2012 12:54:23)</b><br>
@@ -1756,7 +1841,7 @@ wi-fi. Есть очень-очень бюджетный вариант за 450
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:denis-by@list.ru">Денис</a> (12.02.2012 09:58:03)</b><br>
@@ -1789,7 +1874,7 @@ wi-fi. Есть очень-очень бюджетный вариант за 450
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:vassskova@ukr.net">АЛЛА</a> (13.02.2012 04:10:55)</b><br>
@@ -1825,7 +1910,7 @@ wi-fi. Есть очень-очень бюджетный вариант за 450
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:denis-by@list.ru">Денис</a> (11.02.2012 23:06:35)</b><br>
@@ -1856,7 +1941,7 @@ wi-fi. Есть очень-очень бюджетный вариант за 450
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:out549@gmail.com">Таня</a> (06.02.2012 05:07:51)</b><br>
@@ -1884,7 +1969,7 @@ wi-fi. Есть очень-очень бюджетный вариант за 450
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:lipa0808@mail.ru">юля</a> (02.02.2012 03:28:33)</b><br>
@@ -1906,7 +1991,7 @@ Barcelo Capella Beach 16.02.12 прилет 15-15 и сколько это бу�
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:out549@gmail.com">Таня</a> (31.01.2012 11:27:05)</b><br>
@@ -1927,7 +2012,7 @@ Barcelo Capella Beach 16.02.12 прилет 15-15 и сколько это бу�
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:out549@gmail.com">Таня</a> (31.01.2012 01:22:04)</b><br>
@@ -1951,7 +2036,7 @@ Barcelo Capella Beach 16.02.12 прилет 15-15 и сколько это бу�
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:Litvinov_mg@mail.ru">Максим Геннадьевич</a> (27.01.2012 05:39:21)</b><br>
@@ -1974,7 +2059,7 @@ Barcelo Capella Beach 16.02.12 прилет 15-15 и сколько это бу�
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:out549@gmail.com">Таня</a> (24.01.2012 09:00:23)</b><br>
@@ -1996,7 +2081,7 @@ Barcelo Capella Beach 16.02.12 прилет 15-15 и сколько это бу�
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:Litvinov_mg@mail.ru">Максим Геннадьевич</a> (23.01.2012 03:29:51)</b><br>
@@ -2021,7 +2106,7 @@ Barcelo Capella Beach 16.02.12 прилет 15-15 и сколько это бу�
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:out549@gmail.com">Таня</a> (23.01.2012 08:37:30)</b><br>
@@ -2044,7 +2129,7 @@ Barcelo Capella Beach 16.02.12 прилет 15-15 и сколько это бу�
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:Litvinov_mg@mail.ru">Максим Геннадьевич</a> (22.01.2012 00:28:36)</b><br>
@@ -2068,7 +2153,7 @@ Barcelo Capella Beach 16.02.12 прилет 15-15 и сколько это бу�
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:little_ramona@mail.ru">Poli</a> (20.01.2012 15:06:07)</b><br>
@@ -2087,7 +2172,7 @@ Barcelo Capella Beach 16.02.12 прилет 15-15 и сколько это бу�
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:smk-2000@rambler.ru">Зося</a> (12.01.2012 00:44:42)</b><br>
@@ -2108,7 +2193,7 @@ Barcelo Capella Beach 16.02.12 прилет 15-15 и сколько это бу�
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:shuls77@list.ru">Андрей</a> (05.01.2012 12:44:47)</b><br>
@@ -2145,7 +2230,7 @@ Barcelo Capella Beach 16.02.12 прилет 15-15 и сколько это бу�
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:out549@gmail.com">Таня</a> (16.12.2011 05:33:18)</b><br>
@@ -2183,7 +2268,7 @@ Barcelo Capella Beach 16.02.12 прилет 15-15 и сколько это бу�
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:89525143594@mail.ru">Антон</a> (03.12.2011 09:23:33)</b><br>
@@ -2207,7 +2292,7 @@ Barcelo Capella Beach 16.02.12 прилет 15-15 и сколько это бу�
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Валерий</a> (17.11.2011 14:37:34)</b><br>
@@ -2236,7 +2321,7 @@ mail.ru хоть yandex.ru хоть rambler.ru  <img src="files/biggrin.gif" bor
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:rybbet@bk.ru">Павел</a> (14.11.2011 10:19:56)</b><br>
@@ -2254,7 +2339,7 @@ mail.ru хоть yandex.ru хоть rambler.ru  <img src="files/biggrin.gif" bor
 </tbody></table>
 
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:qwacer@mail.ru">Павел</a> (30.10.2011 17:12:00)</b><br>
@@ -2272,7 +2357,7 @@ mail.ru хоть yandex.ru хоть rambler.ru  <img src="files/biggrin.gif" bor
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:burdos@mail.ru">Андрей</a> (21.10.2011 14:24:37)</b><br>
@@ -2298,7 +2383,7 @@ mail.ru хоть yandex.ru хоть rambler.ru  <img src="files/biggrin.gif" bor
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:vbvb1973@mail.ru">владимир</a> (27.09.2011 09:20:29)</b><br>
@@ -2329,7 +2414,7 @@ mail.ru хоть yandex.ru хоть rambler.ru  <img src="files/biggrin.gif" bor
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:lanamsk@mail.ru">Светлана</a> (04.09.2011 09:58:58)</b><br>
@@ -2351,7 +2436,7 @@ mail.ru хоть yandex.ru хоть rambler.ru  <img src="files/biggrin.gif" bor
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:nadezhda.stmatlg@rambler.ru">Надежда</a> (22.08.2011 16:39:02)</b><br>
@@ -2373,7 +2458,7 @@ mail.ru хоть yandex.ru хоть rambler.ru  <img src="files/biggrin.gif" bor
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:capri@rieder.net.py">Юрий</a> (12.08.2011 12:37:57)</b><br>
@@ -2394,7 +2479,7 @@ mail.ru хоть yandex.ru хоть rambler.ru  <img src="files/biggrin.gif" bor
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:vbvb1973@mail.ru">владимир</a> (05.08.2011 06:24:42)</b><br>
@@ -2414,7 +2499,7 @@ mail.ru хоть yandex.ru хоть rambler.ru  <img src="files/biggrin.gif" bor
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:bujanov.vitaly@ya.ru">виталик.алчевск</a> (02.07.2011 11:59:56)</b><br>
@@ -2430,7 +2515,7 @@ mail.ru хоть yandex.ru хоть rambler.ru  <img src="files/biggrin.gif" bor
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:richard@economno.com">RICCO</a> (26.05.2011 08:50:05)</b><br>
@@ -2454,7 +2539,7 @@ Sports Hamilton (200 метров от вертолетной площадки �
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:capri@rieder.net.py">Юрий</a> (25.05.2011 15:38:24)</b><br>
@@ -2494,7 +2579,7 @@ Sports Hamilton (200 метров от вертолетной площадки �
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:tomskvsusa@yandex.ru">Илья</a> (02.05.2011 23:20:33)</b><br>
@@ -2540,7 +2625,7 @@ Sports Hamilton (200 метров от вертолетной площадки �
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:rauf.najafli@gmail.com">Рауф</a> (18.04.2011 07:53:43)</b><br>
@@ -2559,7 +2644,7 @@ Sports Hamilton (200 метров от вертолетной площадки �
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Сергей</a> (14.04.2011 15:40:26)</b><br>
@@ -2579,7 +2664,7 @@ Sports Hamilton (200 метров от вертолетной площадки �
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:Garpia78@mail.ru">Ираида</a> (22.03.2011 11:36:50)</b><br>
@@ -2617,7 +2702,7 @@ Sports Hamilton (200 метров от вертолетной площадки �
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:alexspbnsk@Mail.ru">Lunohod Spb</a> (20.03.2011 06:03:58)</b><br>
@@ -2656,7 +2741,7 @@ Sports Hamilton (200 метров от вертолетной площадки �
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:Fray@xaker.ru">Денис</a> (09.03.2011 16:29:34)</b><br>
@@ -2672,7 +2757,7 @@ Sports Hamilton (200 метров от вертолетной площадки �
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:Fray@xaker.ru">Денис</a> (09.03.2011 11:16:45)</b><br>
@@ -2713,7 +2798,7 @@ Sports Hamilton (200 метров от вертолетной площадки �
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:fray@xaker.ru">Денис</a> (08.03.2011 15:23:20)</b><br>
@@ -2737,7 +2822,7 @@ Sports Hamilton (200 метров от вертолетной площадки �
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:zab.rogazza.dguba0">таня</a> (04.03.2011 04:13:16)</b><br>
@@ -2766,7 +2851,7 @@ Sports Hamilton (200 метров от вертолетной площадки �
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:zab.rogazza.dguda0">таня </a> (03.03.2011 04:57:51)</b><br>
@@ -2789,7 +2874,7 @@ Sports Hamilton (200 метров от вертолетной площадки �
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:alsrd@hotmail.com">Александр</a> (19.02.2011 08:57:36)</b><br>
@@ -2805,7 +2890,7 @@ Sports Hamilton (200 метров от вертолетной площадки �
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:foto_kor@mail.ru">Валерий</a> (17.02.2011 22:23:23)</b><br>
@@ -2825,7 +2910,7 @@ Sports Hamilton (200 метров от вертолетной площадки �
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Валера</a> (17.02.2011 22:19:34)</b><br>
@@ -2845,7 +2930,7 @@ Sports Hamilton (200 метров от вертолетной площадки �
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:berry2005@list.ru">Инна</a> (28.01.2011 12:45:50)</b><br>
@@ -2866,7 +2951,7 @@ Sports Hamilton (200 метров от вертолетной площадки �
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:berry2005@list.ru">Инна</a> (28.01.2011 12:41:19)</b><br>
@@ -2902,7 +2987,7 @@ innayakimenko<br>С уважением Инна Якименко<br><br><b><font
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:berry2005@list.ru">Инна</a> (27.01.2011 15:44:34)</b><br>
@@ -2926,7 +3011,7 @@ innayakimenko<br>С уважением Инна Якименко<br><br><b><font
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:berry2005@list.ru">Инна</a> (27.01.2011 14:50:08)</b><br>
@@ -2954,7 +3039,7 @@ innayakimenko<br>С уважением Инна Якименко<br><br><b><font
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:berry2005@list.ru">Инна</a> (27.01.2011 04:39:18)</b><br>
@@ -2985,7 +3070,7 @@ innayakimenko<br>С уважением Инна Якименко<br><br><b><font
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Дмитрий</a> (24.01.2011 05:49:18)</b><br>
@@ -3018,7 +3103,7 @@ innayakimenko<br>С уважением Инна Якименко<br><br><b><font
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:siyana.yevpack@gmail.com">Сияна</a> (22.01.2011 20:25:40)</b><br>
@@ -3046,7 +3131,7 @@ innayakimenko<br>С уважением Инна Якименко<br><br><b><font
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:lovesofia@rambler.ru">Борис и Ольга</a> (19.01.2011 12:51:49)</b><br>
@@ -3065,7 +3150,7 @@ innayakimenko<br>С уважением Инна Якименко<br><br><b><font
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:demonn20@rambler.ru">Слава</a> (19.01.2011 11:49:38)</b><br>
@@ -3085,7 +3170,7 @@ innayakimenko<br>С уважением Инна Якименко<br><br><b><font
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:japanisgirl@bigmir.net">japanisgirl</a> (19.01.2011 10:26:27)</b><br>
@@ -3114,7 +3199,7 @@ innayakimenko<br>С уважением Инна Якименко<br><br><b><font
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:vbvb1973@mail.ru">владимир</a> (18.01.2011 14:49:20)</b><br>
@@ -3130,7 +3215,7 @@ innayakimenko<br>С уважением Инна Якименко<br><br><b><font
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:japanisgirl@bigmir.net">japanisgirl</a> (18.01.2011 03:47:30)</b><br>
@@ -3151,7 +3236,7 @@ innayakimenko<br>С уважением Инна Якименко<br><br><b><font
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:japanisgirl@bigmir.net">japanisgirl</a> (17.01.2011 13:43:19)</b><br>
@@ -3184,7 +3269,7 @@ innayakimenko<br>С уважением Инна Якименко<br><br><b><font
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Ольга и Костя</a> (03.01.2011 12:19:58)</b><br>
@@ -3202,7 +3287,7 @@ innayakimenko<br>С уважением Инна Якименко<br><br><b><font
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Ранис</a> (25.08.2010 07:47:42)</b><br>
@@ -3225,7 +3310,7 @@ innayakimenko<br>С уважением Инна Якименко<br><br><b><font
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Наталия</a> (12.05.2010 10:42:53)</b><br>
@@ -3255,7 +3340,7 @@ innayakimenko<br>С уважением Инна Якименко<br><br><b><font
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Людмила</a> (07.04.2010 12:46:04)</b><br>
@@ -3290,7 +3375,7 @@ innayakimenko<br>С уважением Инна Якименко<br><br><b><font
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Людмила</a> (05.07.2010 11:41:10)</b><br>
@@ -3345,7 +3430,7 @@ innayakimenko<br>С уважением Инна Якименко<br><br><b><font
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Олег</a> (02.06.2010 11:40:18)</b><br>
@@ -3365,7 +3450,7 @@ innayakimenko<br>С уважением Инна Якименко<br><br><b><font
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Александр</a> (02.11.2009 11:39:37)</b><br>
@@ -3385,7 +3470,7 @@ innayakimenko<br>С уважением Инна Якименко<br><br><b><font
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Алексей</a> (01.11.2009 11:38:47)</b><br>
@@ -3410,7 +3495,7 @@ innayakimenko<br>С уважением Инна Якименко<br><br><b><font
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Дмитрий</a> (30.10.2009 11:37:37)</b><br>
@@ -3437,7 +3522,7 @@ innayakimenko<br>С уважением Инна Якименко<br><br><b><font
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Людмила</a> (30.09.2009 11:36:39)</b><br>
@@ -3455,7 +3540,7 @@ innayakimenko<br>С уважением Инна Якименко<br><br><b><font
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Людмила</a> (10.08.2009 11:36:02)</b><br>
@@ -3506,7 +3591,7 @@ innayakimenko<br>С уважением Инна Якименко<br><br><b><font
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Сергей</a> (30.04.2009 11:34:30)</b><br>
@@ -3522,7 +3607,7 @@ innayakimenko<br>С уважением Инна Якименко<br><br><b><font
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Дина</a> (22.03.2009 11:33:53)</b><br>
@@ -3547,7 +3632,7 @@ dinasbitneva@gmail.com Счастливо!<br><br> <br><b><font color="blue">П�
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Елена</a> (30.01.2009 11:33:06)</b><br>
@@ -3580,7 +3665,7 @@ dinasbitneva@gmail.com Счастливо!<br><br> <br><b><font color="blue">П�
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Сергей</a> (23.04.2008 11:32:14)</b><br>
@@ -3596,7 +3681,7 @@ dinasbitneva@gmail.com Счастливо!<br><br> <br><b><font color="blue">П�
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Дмитрий</a> (16.03.2008 11:31:29)</b><br>
@@ -3612,7 +3697,7 @@ dinasbitneva@gmail.com Счастливо!<br><br> <br><b><font color="blue">П�
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Александр</a> (12.03.2008 11:30:44)</b><br>
@@ -3641,7 +3726,7 @@ dinasbitneva@gmail.com Счастливо!<br><br> <br><b><font color="blue">П�
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Алексей</a> (11.02.2008 11:30:00)</b><br>
@@ -3668,7 +3753,7 @@ dinasbitneva@gmail.com Счастливо!<br><br> <br><b><font color="blue">П�
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Денис</a> (30.02.2008 11:29:09)</b><br>
@@ -3726,7 +3811,7 @@ dinasbitneva@gmail.com Счастливо!<br><br> <br><b><font color="blue">П�
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Алексей</a> (01.01.2008 11:28:20)</b><br>
@@ -3753,7 +3838,7 @@ dinasbitneva@gmail.com Счастливо!<br><br> <br><b><font color="blue">П�
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Юлия</a> (22.12.2007 11:27:38)</b><br>
@@ -3781,7 +3866,7 @@ dinasbitneva@gmail.com Счастливо!<br><br> <br><b><font color="blue">П�
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Дима</a> (11.12.2007 11:26:54)</b><br>
@@ -3811,7 +3896,7 @@ dinasbitneva@gmail.com Счастливо!<br><br> <br><b><font color="blue">П�
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Дима</a> (23.11.2007 11:26:08)</b><br>
@@ -3849,7 +3934,7 @@ dinasbitneva@gmail.com Счастливо!<br><br> <br><b><font color="blue">П�
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Дима</a> (18.10.2007 11:25:16)</b><br>
@@ -3877,7 +3962,7 @@ dinasbitneva@gmail.com Счастливо!<br><br> <br><b><font color="blue">П�
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Алексей</a> (16.10.2007 11:24:37)</b><br>
@@ -3893,7 +3978,7 @@ dinasbitneva@gmail.com Счастливо!<br><br> <br><b><font color="blue">П�
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Артемий</a> (13.10.2007 11:23:52)</b><br>
@@ -3912,7 +3997,7 @@ dinasbitneva@gmail.com Счастливо!<br><br> <br><b><font color="blue">П�
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Алексей</a> (11.10.2007 11:22:39)</b><br>
@@ -3931,7 +4016,7 @@ dinasbitneva@gmail.com Счастливо!<br><br> <br><b><font color="blue">П�
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Андрей</a> (10.10.2007 11:21:48)</b><br>
@@ -3957,7 +4042,7 @@ dinasbitneva@gmail.com Счастливо!<br><br> <br><b><font color="blue">П�
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Сергей</a> (14.09.2007 11:21:00)</b><br>
@@ -3977,7 +4062,7 @@ dinasbitneva@gmail.com Счастливо!<br><br> <br><b><font color="blue">П�
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Артур</a> (13.09.2007 11:20:16)</b><br>
@@ -4012,7 +4097,7 @@ dinasbitneva@gmail.com Счастливо!<br><br> <br><b><font color="blue">П�
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Сергей</a> (12.09.2007 11:19:28)</b><br>
@@ -4031,7 +4116,7 @@ dinasbitneva@gmail.com Счастливо!<br><br> <br><b><font color="blue">П�
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Сергей</a> (10.09.2007 11:18:44)</b><br>
@@ -4047,7 +4132,7 @@ dinasbitneva@gmail.com Счастливо!<br><br> <br><b><font color="blue">П�
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Сергей</a> (09.09.2007 11:17:55)</b><br>
@@ -4067,7 +4152,7 @@ dinasbitneva@gmail.com Счастливо!<br><br> <br><b><font color="blue">П�
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Сергей</a> (30.12.2007 11:17:19)</b><br>
@@ -4089,7 +4174,7 @@ dinasbitneva@gmail.com Счастливо!<br><br> <br><b><font color="blue">П�
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Алексей</a> (30.12.2007 11:16:10)</b><br>
@@ -4108,7 +4193,7 @@ dinasbitneva@gmail.com Счастливо!<br><br> <br><b><font color="blue">П�
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Сергей</a> (30.12.2007 11:06:33)</b><br>
@@ -4124,7 +4209,7 @@ dinasbitneva@gmail.com Счастливо!<br><br> <br><b><font color="blue">П�
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Сергей</a> (30.12.2007 11:05:33)</b><br>
@@ -4143,7 +4228,7 @@ dinasbitneva@gmail.com Счастливо!<br><br> <br><b><font color="blue">П�
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Сергхио</a> (30.12.2007 11:04:47)</b><br>
@@ -4178,7 +4263,7 @@ dinasbitneva@gmail.com Счастливо!<br><br> <br><b><font color="blue">П�
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Алёна</a> (30.12.2007 11:03:50)</b><br>
@@ -4202,7 +4287,7 @@ dinasbitneva@gmail.com Счастливо!<br><br> <br><b><font color="blue">П�
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Марина</a> (30.12.2007 11:02:31)</b><br>
@@ -4223,7 +4308,7 @@ dinasbitneva@gmail.com Счастливо!<br><br> <br><b><font color="blue">П�
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Марина</a> (30.12.2007 11:01:14)</b><br>
@@ -4246,7 +4331,7 @@ dinasbitneva@gmail.com Счастливо!<br><br> <br><b><font color="blue">П�
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Марина</a> (30.12.2007 11:00:12)</b><br>
@@ -4273,7 +4358,7 @@ inclusive". О бизнесе в этот период думать ещё ра�
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Анастасия</a> (30.12.2007 10:59:23)</b><br>
@@ -4301,7 +4386,7 @@ inclusive". О бизнесе в этот период думать ещё ра�
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Марина</a> (30.12.2007 10:58:33)</b><br>
@@ -4317,7 +4402,7 @@ inclusive". О бизнесе в этот период думать ещё ра�
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Ника</a> (30.12.2007 10:57:45)</b><br>
@@ -4344,7 +4429,7 @@ inclusive". О бизнесе в этот период думать ещё ра�
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Лена</a> (30.12.2007 10:57:01)</b><br>
@@ -4375,7 +4460,7 @@ inclusive". О бизнесе в этот период думать ещё ра�
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
 
-<table align="center" cellpadding="0" cellspacing="0"  width="900"><tbody>
+<table align="center" cellpadding="0" cellspacing="0"  width=100%><tbody>
 <tr><td width="1%"><img src="files/1.gif" border="0" height="12" width="14"></td><td background="files/2.gif" width="98%"></td><td width="1%"><img src="files/3.gif" border="0" height="12" width="14"></td></tr>
 <tr><td background="files/4.gif"></td>
 <td><b><a href="mailto:">Ирина</a> (30.12.2007 10:56:14)</b><br>
@@ -4395,5 +4480,5 @@ GRAND PALLALIUM PALACE,что нибудь знаете об этом отеле
 <td background="files/6.gif">&nbsp;</td>
 </tr><tr><td><img src="files/8.gif" border="0" height="12" width="14"></td><td background="files/5.gif"></td><td><img src="files/9.gif" border="0" height="12" width="14"></td></tr>
 </tbody></table>
-
+  </div>
 </body>  </HTML>
